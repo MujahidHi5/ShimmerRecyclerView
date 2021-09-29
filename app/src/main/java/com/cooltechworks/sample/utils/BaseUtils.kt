@@ -20,9 +20,9 @@ package com.cooltechworks.sample.utils
 
 import android.content.Context
 import android.content.res.Resources
-import android.support.annotation.StringRes
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
+import androidx.annotation.StringRes
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.cooltechworks.sample.R
 import com.cooltechworks.sample.models.ItemCard
@@ -95,21 +95,24 @@ object BaseUtils {
                 demoConfiguration = DemoConfiguration()
                 demoConfiguration.styleResource = R.style.AppTheme
                 demoConfiguration.layoutResource = R.layout.activity_list
-                demoConfiguration.layoutManager = LinearLayoutManager(context)
+                demoConfiguration.layoutManager =
+                    LinearLayoutManager(context)
                 demoConfiguration.titleResource = R.string.ab_list_title
             }
             TYPE_GRID -> {
                 demoConfiguration = DemoConfiguration()
                 demoConfiguration.styleResource = R.style.AppThemeGrid
                 demoConfiguration.layoutResource = R.layout.activity_grid
-                demoConfiguration.layoutManager = GridLayoutManager(context, 2)
+                demoConfiguration.layoutManager =
+                    GridLayoutManager(context, 2)
                 demoConfiguration.titleResource = R.string.ab_grid_title
             }
             TYPE_SECOND_LIST -> {
                 demoConfiguration = DemoConfiguration()
                 demoConfiguration.styleResource = R.style.AppTheme
                 demoConfiguration.layoutResource = R.layout.activity_second_list
-                demoConfiguration.layoutManager = LinearLayoutManager(context)
+                demoConfiguration.layoutManager =
+                    LinearLayoutManager(context)
                 demoConfiguration.titleResource = R.string.ab_list_title
                 demoConfiguration.itemDecoration = CardPaddingItemDecoration(context)
             }
@@ -117,7 +120,8 @@ object BaseUtils {
                 demoConfiguration = DemoConfiguration()
                 demoConfiguration.styleResource = R.style.AppThemeGrid
                 demoConfiguration.layoutResource = R.layout.activity_second_grid
-                demoConfiguration.layoutManager = GridLayoutManager(context, 2)
+                demoConfiguration.layoutManager =
+                    GridLayoutManager(context, 2)
                 demoConfiguration.titleResource = R.string.ab_grid_title
             }
             else -> demoConfiguration = null

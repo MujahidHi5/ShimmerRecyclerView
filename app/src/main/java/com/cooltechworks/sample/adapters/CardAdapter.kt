@@ -18,7 +18,7 @@
  */
 package com.cooltechworks.sample.adapters
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import com.cooltechworks.sample.models.ItemCard
 import com.cooltechworks.sample.utils.BaseUtils
